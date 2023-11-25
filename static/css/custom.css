@@ -1,0 +1,154 @@
+hr {
+  background-color: black;
+  margin: auto;
+  width: 85vw;
+}
+
+.carousel-item video {
+  max-width: 80%;
+}
+
+/* 
+  https://github.com/dreamsim-nights/dreamsim-nights.github.io
+*/
+.carousel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel .carousel-indicators li {
+   background-color: #bbb;
+   width: 15px;
+   height: 15px;
+   border-radius: 100%;
+ }
+
+ .carousel .carousel-indicators li.active {
+   background-color: #717171;
+   width: 15px;
+   height: 15px;
+   border-radius: 100%;
+ }
+
+ .ba {
+   border-style: solid;
+   border-width: 1px;
+}
+
+.carousel-item {
+  overflow: hidden;
+  text-align: center;
+}
+
+.carousel-inner .item img {
+  margin: auto;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  opacity: 1;
+}
+
+.carousel-control-next:focus,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-prev:hover {
+  opacity: 1;
+}
+
+.slider-navigation-next,
+.slider-navigation-previous {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background: gray center center no-repeat;
+    background-size: 20px 20px;
+    border: 1px solid #fff;
+    border-radius: 25091983px;
+    box-shadow: 0 2px 5px #3232321a;
+    top: 50%;
+    margin-top: -20px;
+    left: 0;
+    cursor: pointer;
+    transition: transform .3s, opacity .3s, -webkit-transform .3s
+}
+
+.slider-navigation-next svg,
+.slider-navigation-previous svg {
+    width: 25%;
+    background: gray
+}
+
+.slider-navigation-next {
+    left: auto;
+    right: 0;
+    background: gray center center no-repeat;
+    background-size: 20px 20px
+}
+
+/* 
+  https://github.com/rl-diffusion/rl-diffusion.github.io
+*/
+
+.teaser {
+  margin: 0.5rem auto 1rem auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.replay {
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  align-items: center;
+  cursor: pointer;
+  color:#2296f3ff;
+}
+
+.replay img {
+  height: 25px;
+  margin-right: 5px;
+}
+
+.caption {
+  font-size: 12pt;
+  font-style: italic;
+  min-width: 400px;
+  color: black;
+}
+
+.results-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem;
+  justify-content: center;
+}
+
+.results-grid>div{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: fit-content(100%);
+  max-width: 80%;
+  min-width: 350px;
+  gap: 0.1rem;
+  align-items: center;
+  justify-items: center;
+  margin: auto 0;
+}
+
+.results-grid .results-pair {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.results-grid>div>div {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-self: center;
+  width: 100%;
+  align-items: center;
+}

@@ -1,8 +1,3 @@
-body {
-  font-family: 'Noto Sans', sans-serif;
-}
-
-
 .footer .icon-link {
     font-size: 25px;
     color: #000;
@@ -23,9 +18,9 @@ body {
   padding-bottom: 3rem;
 }
 
-.teaser {
+/* .teaser {
   font-family: 'Google Sans', sans-serif;
-}
+} */
 
 
 .publication-title {
@@ -47,13 +42,13 @@ body {
 .publication-header .hero-body {
 }
 
-.publication-title {
+/* .publication-title {
     font-family: 'Google Sans', sans-serif;
 }
 
 .publication-authors {
     font-family: 'Google Sans', sans-serif;
-}
+} */
 
 .publication-venue {
     color: #555;

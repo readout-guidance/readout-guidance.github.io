@@ -1,0 +1,365 @@
+<!-- Drag_based Manipulation -->
+<hr>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4 is-centered has-text-centered">Drag-Based Manipulation</h2>
+    <div class="columns is-centered has-text-centered">
+    	<button type="button" style="margin:5px;" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on point tracks from video and can be used to force a desired deformation." disabled>Correspondence Feature Head</button>
+    	<button type="button" style="margin:5px;" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains a contrastive similarity metric between an anchor and positive / negative images and can be used to maintain the appearance of a reference image." disabled>Appearance Similarity Head</button>
+    </div>
+    <br>
+    <!-- Synthetic Images -->
+    <table width="900px" border="0" align="center">
+      <tbody>
+          <tr>
+              <div id="dragSyntheticCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_synthetic/squirrel_1.png" />
+                          <img src="assets/drag_synthetic/squirrel_1.gif" />
+                        </div>
+                        <span class="caption">photo of a squirrel with a hamburger at its feet</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_synthetic/squirrel_2.png" />
+                          <img src="assets/drag_synthetic/squirrel_2.gif" />
+                        </div>
+                        <span class="caption">photo of a squirrel with a hamburger at its feet</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_synthetic/squirrel_3.png" />
+                          <img src="assets/drag_synthetic/squirrel_3.gif" />
+                        </div>
+                        <span class="caption">photo of a squirrel with a hamburger at its feet</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_synthetic/bear_1.png" />
+                          <img src="assets/drag_synthetic/bear_1.gif" />
+                        </div>
+                        <span class="caption">a bear dancing on times square</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_synthetic/bear_2.png" />
+                          <img src="assets/drag_synthetic/bear_2.gif" />
+                        </div>
+                        <span class="caption">a bear dancing on times square</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_synthetic/bear_3.png" />
+                          <img src="assets/drag_synthetic/bear_3.gif" />
+                        </div>
+                        <span class="caption">a bear dancing on times square</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_synthetic/headshot-woman_1.png" />
+                          <img src="assets/drag_synthetic/headshot-woman_1.gif" />
+                        </div>
+                        <span class="caption">professional headshot of a woman with the eiffel tower in the background</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_synthetic/headshot-woman_2.png" />
+                          <img src="assets/drag_synthetic/headshot-woman_2.gif" />
+                        </div>
+                        <span class="caption">professional headshot of a woman with the eiffel tower in the background</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_synthetic/headshot-woman_3.png" />
+                          <img src="assets/drag_synthetic/headshot-woman_3.gif" />
+                        </div>
+                        <span class="caption">professional headshot of a woman with the eiffel tower in the background</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_synthetic/dog_1.png" />
+                          <img src="assets/drag_synthetic/dog_1.gif" />
+                        </div>
+                        <span class="caption">photo of a beagle hovering mid-air</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_synthetic/dog_2.png" />
+                          <img src="assets/drag_synthetic/dog_2.gif" />
+                        </div>
+                        <span class="caption">photo of a beagle hovering mid-air</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_synthetic/dog_3.png" />
+                          <img src="assets/drag_synthetic/dog_3.gif" />
+                        </div>
+                        <span class="caption">photo of a beagle hovering mid-air</span>
+                      </div>
+                    </div>
+                  </div>
+                  <ol class="carousel-indicators" style="bottom: -35px;">
+                      <li data-target="#dragSyntheticCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#dragSyntheticCarousel" data-slide-to="1"></li>
+                      <li data-target="#dragSyntheticCarousel" data-slide-to="2"></li>
+                      <li data-target="#dragSyntheticCarousel" data-slide-to="3"></li>
+                      <li data-target="#dragSyntheticCarousel" data-slide-to="4"></li>
+                      <li data-target="#dragSyntheticCarousel" data-slide-to="5"></li>
+                      <li data-target="#dragSyntheticCarousel" data-slide-to="6"></li>
+                      <li data-target="#dragSyntheticCarousel" data-slide-to="7"></li>
+                      <li data-target="#dragSyntheticCarousel" data-slide-to="8"></li>
+                      <li data-target="#dragSyntheticCarousel" data-slide-to="9"></li>
+                      <li data-target="#dragSyntheticCarousel" data-slide-to="10"></li>
+                      <li data-target="#dragSyntheticCarousel" data-slide-to="11"></li>
+                  </ol>
+                  <a class="carousel-control-prev" href="#dragSyntheticCarousel" role="button" data-slide="prev">
+                      <div class="slider-navigation-previous">
+                          <svg viewBox="0 0 50 80" xml:space="preserve" style="margin-right: 4px;">
+                              <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                  stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
+                              </polyline>
+                          </svg>
+                      </div>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#dragSyntheticCarousel" role="button" data-slide="next">
+                      <div class="slider-navigation-next">
+                          <svg viewBox="0 0 50 80" xml:space="preserve" style="margin-left: 4px;">
+                              <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                  stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
+                              </polyline>
+                          </svg>
+                      </div>
+                      <span class="sr-only">Next</span>
+                  </a>
+              </div>
+          </tr>
+      </tbody>
+    </table>
+    <br><br><br>
+    <!-- Synthetic Images -->
+    <!-- Real Images -->
+    <table width="900px" border="0" align="center">
+      <tbody>
+          <tr>
+              <div id="dragRealCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_real/JH_2023-09-14-1823-02.png" />
+                          <img src="assets/drag_real/JH_2023-09-14-1823-02.gif" />
+                        </div>
+                        <span class="caption">a photo of a tiger</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_real/JH_2023-09-14-1825-41.png" />
+                          <img src="assets/drag_real/JH_2023-09-14-1825-41.gif" />
+                        </div>
+                        <span class="caption">a photo of a man holding a crocodile</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_real/wolf-looking.png" />
+                          <img src="assets/drag_real/wolf-looking.gif" />
+                        </div>
+                      </div>
+                      <span class="caption">wolf looking around</span>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_real/JH_2023-09-14-1838-08.png" />
+                          <img src="assets/drag_real/JH_2023-09-14-1838-08.gif" />
+                        </div>
+                        <span class="caption">a photo of a rabbit</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_real/alpine-ibex.png" />
+                          <img src="assets/drag_real/alpine-ibex.gif" />
+                        </div>
+                        <span class="caption">an alpine ibex with horns</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <div class="results-pair">
+                          <img src="assets/drag_real/JH_2023-09-14-1826-07.png" />
+                          <img src="assets/drag_real/JH_2023-09-14-1826-07.gif" />
+                        </div>
+                        <span class="caption">a photo of a raccoon</span>
+                      </div>
+                    </div>
+                  </div>  
+                  <ol class="carousel-indicators" style="bottom: -35px;">
+                      <li data-target="#dragRealCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#dragRealCarousel" data-slide-to="1"></li>
+                      <li data-target="#dragRealCarousel" data-slide-to="2"></li>
+                      <li data-target="#dragRealCarousel" data-slide-to="3"></li>
+                      <li data-target="#dragRealCarousel" data-slide-to="4"></li>
+                      <li data-target="#dragRealCarousel" data-slide-to="5"></li>
+                  </ol>
+                  <a class="carousel-control-prev" href="#dragRealCarousel" role="button" data-slide="prev">
+                      <div class="slider-navigation-previous">
+                          <svg viewBox="0 0 50 80" xml:space="preserve" style="margin-right: 4px;">
+                              <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                  stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
+                              </polyline>
+                          </svg>
+                      </div>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#dragRealCarousel" role="button" data-slide="next">
+                      <div class="slider-navigation-next">
+                          <svg viewBox="0 0 50 80" xml:space="preserve" style="margin-left: 4px;">
+                              <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                  stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
+                              </polyline>
+                          </svg>
+                      </div>
+                      <span class="sr-only">Next</span>
+                  </a>
+              </div>
+          </tr>
+      </tbody>
+    </table>
+    <br><br><br>
+    <!-- Real Images -->
+  </div>
+</section>
+<!-- Drag_based Manipulation -->
+
+<!-- Spatially Aligned Control -->
+<hr>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4 is-centered has-text-centered">Spatially Aligned Control</h2>
+    <div class="columns is-centered has-text-centered">
+    	<button type="button" style="margin:5px;" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on OpenPose pose images and can be used for pose-controlled generation." disabled>Pose Head</button>
+    	<button type="button" style="margin:5px;" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on MiDaS depth images and can be used for depth-controlled generation." disabled>Depth Head</button>
+    	<button type="button" style="margin:5px;" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on HED edge images and can be used for edge-controlled generation." disabled>Edge Head</button>
+    </div>
+    <br>
+    <table width="900px" border="0" align="center">
+      <tbody>
+          <tr>
+              <div id="poseCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="results-grid">
+                        <video autoplay muted playsinline loop>
+                          <source src="assets/spatial/000000013291.m4v" type="video/mp4">
+                        </video>
+                        <span class="caption">a group of people playing with Frisbee's on the grass</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <video autoplay muted playsinline loop>
+                          <source src="assets/spatial/000000429761.m4v" type="video/mp4">
+                        </video>
+                        <span class="caption">two men on a tennis court shaking hands over the net</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <video autoplay muted playsinline loop>
+                          <source src="assets/spatial/000000055072.m4v" type="video/mp4">
+                        </video>
+                        <span class="caption">a giraffe standing in a straw field next to shrubbery</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <video autoplay muted playsinline loop>
+                          <source src="assets/spatial/000000098261.m4v" type="video/mp4">
+                        </video>
+                        <span class="caption">two birds standing next to each other on a branch</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <video autoplay muted playsinline loop>
+                          <source src="assets/spatial/000000016502.m4v" type="video/mp4">
+                        </video>
+                        <span class="caption">a mountain goat stands on top of a rock on a hill</span>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="results-grid">
+                        <video autoplay muted playsinline loop>
+                          <source src="assets/spatial/000000079229.m4v" type="video/mp4">
+                        </video>
+                        <span class="caption">a man riding a horse followed by a dog</span>
+                      </div>
+                    </div>
+                  </div>
+                  <ol class="carousel-indicators" style="bottom: -35px;">
+                      <li data-target="#poseCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#poseCarousel" data-slide-to="1"></li>
+                      <li data-target="#poseCarousel" data-slide-to="2"></li>
+                      <li data-target="#poseCarousel" data-slide-to="3"></li>
+                      <li data-target="#poseCarousel" data-slide-to="4"></li>
+                      <li data-target="#poseCarousel" data-slide-to="5"></li>
+                  </ol>
+                  <a class="carousel-control-prev" href="#poseCarousel" role="button" data-slide="prev">
+                      <div class="slider-navigation-previous">
+                          <svg viewBox="0 0 50 80" xml:space="preserve" style="margin-right: 4px;">
+                              <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                  stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
+                              </polyline>
+                          </svg>
+                      </div>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#poseCarousel" role="button" data-slide="next">
+                      <div class="slider-navigation-next">
+                          <svg viewBox="0 0 50 80" xml:space="preserve" style="margin-left: 4px;">
+                              <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                  stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
+                              </polyline>
+                          </svg>
+                      </div>
+                      <span class="sr-only">Next</span>
+                  </a>
+              </div>
+          </tr>
+      </tbody>
+    </table>
+    <br><br><br>
+  </div>
+</section>
+<!-- Spatially Aligned Control -->

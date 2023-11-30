@@ -1,3 +1,27 @@
+.caption {
+  margin-top: 15px !important;
+  width: auto !important;
+  font-size: 12pt;
+  min-width: 400px;
+  color: black;
+  text-align: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 100;
+  left: 0;
+  gap: 0.1rem;
+  width: 80%;
+  min-width: 350px;
+  margin: auto 0;
+}
+
+.this-application {
+  margin: 10px;
+  color: gray;
+}
+
 .has-text-purple {
  color: #683d68ff;
 }
@@ -55,7 +79,7 @@ input[type="range"]::-webkit-slider-thumb {
 .btn-active {
   font-weight: bold;
   background-color: #683d68ff;
-  color: #fdf499ff;
+  color: #fff9bfff;
 }
 
 .btn-outline-danger,
@@ -72,7 +96,7 @@ input[type="range"]::-webkit-slider-thumb {
 hr {
   background-color: black;
   margin: auto;
-  width: 85vw;
+  width: 90vw;
 }
 
 .carousel-item video {
@@ -186,13 +210,6 @@ hr {
   margin-right: 5px;
 }
 
-.caption {
-  font-size: 12pt;
-  font-style: italic;
-  min-width: 400px;
-  color: black;
-}
-
 .results-grid {
   display: flex;
   flex-wrap: wrap;
@@ -202,7 +219,6 @@ hr {
 
 .results-grid>div{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: fit-content(100%);
   max-width: 80%;
   min-width: 350px;
@@ -216,7 +232,7 @@ hr {
   grid-template-columns: repeat(1, 1fr);
 }
 
-.results-grid .results-image-var {
+.results-grid .results-pair {
   grid-template-columns: repeat(2, 1fr);
 }
 

@@ -13,7 +13,7 @@ function setActiveButton(activeButton) {
     otherButton.classList.remove('btn-active');
   });
   activeButton.classList.add('btn-active');
-  // Handle Drag-Based Manipulation
+  // Handle Drag - Generated
   if (['.btn-prompt', '.btn-drag'].includes(otherClass)) {
     changeDynamicResult('assets/drag_synthetic/', 'dynamic-drag', 'dynamic-result', '.png', '.gif', 'btn-prompt', 'btn-drag');
   }
@@ -25,9 +25,15 @@ function setActiveButton(activeButton) {
   if (['.btn-modality', '.btn-spatial'].includes(otherClass)) {
     changeDynamicResult('assets/spatial/', 'dynamic-spatial', null, '.m4v', null, 'btn-modality', 'btn-spatial');
   }
+  // Handle Image Var
   if (otherClass == '.btn-image-var') {
-    changeDynamicResult('assets/image_var/', 'dynamic-image-var-ref', 'dynamic-image-var', '_ref.png', '_1.png', 'btn-image-var', null)
+    changeDynamicResult('assets/image_var/', 'dynamic-image-var-ref', 'dynamic-image-var', '_ref.png', '_0.png', 'btn-image-var', null)
+    const slider = document.getElementById("dynamicSlider");
+    const dynamicSliderValue = document.getElementById("dynamicSliderValue");
+    slider.value = "0";
+    dynamicSliderValue.textContent = "0";
   }
+  // Handle Drag - Real
   if (otherClass == '.btn-prompt-real') {
     changeDynamicResult('assets/drag_real/', 'dynamic-drag-real', 'dynamic-result-real', '.png', '.gif', 'btn-prompt-real', null)
   }
@@ -83,7 +89,7 @@ function changeDynamicResult(basePath, dynamic1, dynamic2, dynamicExt1, dynamicE
       dynamicElement2Src = basePath + path1
       if (path2 !== null) {
         dynamicElement2Src += "_" + path2;
-      } 
+      }
       dynamicElement2Src += dynamicExt2;
       dynamicElement2.src = dynamicElement2Src;
     }

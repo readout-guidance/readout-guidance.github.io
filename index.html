@@ -40,8 +40,6 @@
   
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/interactions.js"></script>
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;700&display=swap">
 </head>
 <body>
 
@@ -172,8 +170,8 @@
     </div>
     <!-- <img style="z-index: 0" class="background-image" src="assets/spatial/empty.png"> -->
     <div class="results-grid">
-      <div class="results-single">
-        <video style="z-index: 1" id="dynamic-spatial" autoplay muted playsinline loop>
+      <div style="max-width: 95% !important;" class="results-single">
+        <video style="margin: 10px -1px 0 0;" id="dynamic-spatial" autoplay muted playsinline loop>
           <source src="assets/spatial/pose_1.m4v" type="video/mp4">
         </video>
         <div class="caption">

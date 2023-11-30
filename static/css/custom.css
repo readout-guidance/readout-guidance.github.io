@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-.background-image {
+/* .background-image {
   position: absolute;
   top: 100;
   left: 0;
@@ -15,7 +15,7 @@
   width: 80%;
   min-width: 350px;
   margin: auto 0;
-}
+} */
 
 .this-application {
   margin: 10px;
@@ -226,6 +226,7 @@ hr {
   align-items: center;
   justify-items: center;
   margin: auto 0;
+  overflow: hidden;
 }
 
 .results-grid .results-single {

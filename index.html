@@ -44,7 +44,7 @@
 <body>
 
 <section class="hero">
-  <div class="hero-body">
+  <div class="hero-body" style="padding: 3rem 1.5rem 1rem 1.5rem;">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
@@ -99,8 +99,15 @@
 </section>
 
 <!-- Abstract -->
-<section class="section">
+<section style="padding: 0rem 1.5rem 3rem 1.5rem;" class="section">
   <div class="container is-max-desktop">
+    <div class="results-grid">
+      <div style="max-width:90%; margin-bottom: 50px;" class="results-single">
+        <video autoplay muted playsinline loop>
+          <source src="assets/teaser.m4v" type="video/mp4">
+        </video>
+      </div>
+    </div>
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-4">Abstract</h2>
@@ -168,7 +175,6 @@
       <button type="button" onClick="setActiveButton(this)" class="btn btn-spatial btn-select btn-active" btn-spatial="1">a group of people playing with Frisbee's on the grass</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-spatial btn-select" btn-spatial="2">two men on a tennis court shaking hands over the net</button>
     </div>
-    <!-- <img style="z-index: 0" class="background-image" src="assets/spatial/empty.png"> -->
     <div class="results-grid">
       <div style="max-width: 95% !important;" class="results-single">
         <video style="margin: 10px -1px 0 0;" id="dynamic-spatial" autoplay muted playsinline loop>

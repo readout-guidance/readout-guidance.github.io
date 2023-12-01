@@ -102,11 +102,14 @@
 <section style="padding: 0rem 1.5rem 3rem 1.5rem;" class="section">
   <div class="container is-max-desktop">
     <div class="results-grid">
-      <div style="max-width:90%; margin-bottom: 50px;" class="results-single">
+      <div class="results-single">
         <video autoplay muted playsinline loop>
           <source src="assets/teaser.m4v" type="video/mp4">
         </video>
       </div>
+    </div>
+    <div class="caption" style="margin-bottom: 3rem;">
+    We train small <b>readout heads</b> to predict image properties from diffusion features and use them to <b>guide image generation</b>.
     </div>
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -157,11 +160,12 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-4 is-centered has-text-centered">Spatially Aligned Control</h2>
-    <div class="this-application is-centered has-text-centered">This application uses</div>
     <div class="columns is-centered has-text-centered">
-      <button type="button" style="margin:5px;" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on OpenPose pose images and can be used for pose-controlled generation." disabled>Pose Head</button>
-      <button type="button" style="margin:5px;" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on MiDaS depth images and can be used for depth-controlled generation." disabled>Depth Head</button>
-      <button type="button" style="margin:5px;" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on HED edge images and can be used for edge-controlled generation." disabled>Edge Head</button>
+      <img class="info-icon" src="assets/info.svg" />
+      <button type="button" class="btn btn-caption btn-sm" disabled>This application uses the&nbsp;</button>
+      <button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on OpenPose pose images and can be used for pose-controlled generation." disabled>Pose Head,&nbsp;</button>
+      <button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on MiDaS depth images and can be used for depth-controlled generation." disabled>Depth Head,&nbsp;</button>
+      <button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on HED edge images and can be used for edge-controlled generation." disabled>Edge Head</button>
     </div>
     <br>
     <div class="btn-row">
@@ -194,10 +198,11 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-4 is-centered has-text-centered">Drag-Based Manipulation</h2>
-    <div class="this-application is-centered has-text-centered">This application uses</div>
     <div class="columns is-centered has-text-centered">
-    	<button type="button" style="margin:5px;" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on point tracks from video and can be used to force a desired deformation." disabled>Correspondence Feature Head</button>
-    	<button type="button" style="margin:5px;" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains a contrastive similarity metric between an anchor and positive / negative images and can be used to maintain the appearance of a reference image." disabled>Appearance Similarity Head</button>
+      <img class="info-icon" src="assets/info.svg" />
+      <button type="button" class="btn btn-caption btn-sm" disabled>This application uses the&nbsp;</button>
+    	<button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on point tracks from video and can be used to force a desired deformation." disabled>Correspondence Feature Head,&nbsp;</button>
+    	<button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains a contrastive similarity metric between an anchor and positive / negative images and can be used to maintain the appearance of a reference image." disabled>Appearance Similarity Head</button>
     </div>
     <br>
     <div class="title is-5">Generated Images</div>
@@ -252,10 +257,11 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-4 is-centered has-text-centered">Identity Consistency</h2>
-    <div class="this-application is-centered has-text-centered">This application uses</div>
     <div class="columns is-centered has-text-centered">
-    	<button type="button" style="margin:5px;" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head is a variant of the appearance similarity head trained on faces and can be used to inject a specific identity." disabled>Identity Head</button>
-    	<button type="button" style="margin:5px;" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head is used to preserve the background of the original sampling process." disabled>Appearance Similarity Head</button>
+      <img class="info-icon" src="assets/info.svg" />
+      <button type="button" class="btn btn-caption btn-sm" disabled>This application uses the&nbsp;</button>
+    	<button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head is a variant of the appearance similarity head trained on faces and can be used to inject a specific identity." disabled>Identity Head,&nbsp;</button>
+    	<button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head is used to preserve the background of the original sampling process." disabled>Appearance Similarity Head</button>
     </div>
     <br>
     <div class="btn-row">
@@ -287,9 +293,10 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-4 is-centered has-text-centered">Image Variations</h2>
-    <div class="this-application is-centered has-text-centered">This application uses</div>
     <div class="columns is-centered has-text-centered">
-    	<button type="button" style="margin:5px;" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="bottom" title="This is the same appearance similarity head used in drag-based manipulation." disabled>Appearance Similarity Head</button>
+      <img class="info-icon" src="assets/info.svg" />
+      <button type="button" class="btn btn-caption btn-sm" disabled>This application uses the&nbsp;</button>
+    	<button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This is the same appearance similarity head used in drag-based manipulation." disabled>Appearance Similarity Head</button>
     </div>
     <br>
     <div class="btn-row">
@@ -316,20 +323,14 @@
 <!-- Image Variations -->
 
 <hr>
-<section class="section">
-  <div class="container is-max-desktop">
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
     <h2 class="title is-4">Acknowledgements</h2>
-    <span>
+    <span style="color: black;">
       We would like to thank Stephanie Fu, Eric Wallace, Yossi Gandelsman, Dave Epstein, Ben Poole, 
       Thomas Iljic, Brent Yi, Kevin Black, Jessica Dai, Ethan Weber, Rundi Wu, Xiaojuan Wang, 
       Luming Tang, Ruiqi Gao, Jason Baldridge, Zhengqi Li, and Angjoo Kanazawa for helpful discussions and feedback.
     </span>
-  </div>
-</section>
-
-<hr>
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
     <h2 class="title is-4">BibTeX</h2>
     <pre><code>
     @article{luo2023readoutguidance,

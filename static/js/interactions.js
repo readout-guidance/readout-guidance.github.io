@@ -47,7 +47,7 @@ function setActiveButton(activeButton) {
 }
 
 const promptDict = {
-  "manIdentity": ["oil painting half body portrait of a man on a city street in copenhagen", "portrait of a man and his dog"],
+  "manIdentity": ["oil painting half body portrait of a man on a city street in copenhagen", "oil painting of a man"],
   "womanIdentity": ["photo of a female firefighter in the forest", "photo of a woman at the zoo with a seal"],
   "poseSpatial": ["a group of people playing with Frisbee's on the grass", "two men on a tennis court shaking hands over the net"],
   "depthSpatial": ["two birds standing next to each other on a branch", "a giraffe standing in a straw field next to shrubbery"],

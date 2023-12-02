@@ -191,11 +191,12 @@
   <div class="container is-max-desktop">
     <h2 class="title is-4 is-centered has-text-centered">Spatially Aligned Control</h2>
     <div class="columns is-centered has-text-centered">
-      <img class="info-icon" src="assets/info.svg" />
-      <button type="button" class="btn btn-caption btn-sm" disabled>This application uses the&nbsp;</button>
+      <button type="button" class="btn btn-caption btn-sm" disabled>By guiding the readout from the&nbsp;</button>
       <button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on OpenPose pose images and can be used for pose-controlled generation." disabled>Pose Head,&nbsp;</button>
       <button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on MiDaS depth images and can be used for depth-controlled generation." disabled>Depth Head,&nbsp;</button>
+      <button type="button" class="btn btn-caption btn-sm" disabled>or&nbsp;</button>
       <button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on HED edge images and can be used for edge-controlled generation." disabled>Edge Head</button>
+      <button type="button" class="btn btn-caption btn-sm" disabled>, we can perform pose, depth, or edge-guided generation, similar to ControlNet.</button>
     </div>
     <br>
     <div class="btn-row">
@@ -216,9 +217,6 @@
         <video class="layered-video" id="dynamic-spatial" autoplay muted playsinline loop>
           <source src="assets/spatial/pose_1.m4v" type="video/mp4">
         </video>
-      </div>
-      <div class="caption">
-        We can take a control input and guide the readout to match for spatially controlled generation.
       </div>
     </div>
   </div>

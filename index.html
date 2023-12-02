@@ -13,6 +13,9 @@
   <meta name="description" content="Readout Guidance is a method for controlling text-to-image diffusion models with learned signals.">
   <meta name="keywords" content="readout guidance, self guidance, diffusion hyperfeatures, diffusion features, classifier guidance, guidance, diffusion models">
 
+  <meta content="Readout Guidance: Learning Control from Diffusion Features" property="twitter:title" />
+  <meta content="Readout Guidance: Learning Control from Diffusion Features" property="twitter:description" />
+
   <!-- Google tag (gtag.js) -->
   <!-- <script async src=""></script>
   <script>
@@ -44,7 +47,7 @@
 <body>
 
 <section class="hero">
-  <div class="hero-body" style="padding: 3rem 1.5rem 1rem 1.5rem;">
+  <div class="hero-body" style="padding: 3rem 1.5rem 2rem 1.5rem;">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
@@ -103,17 +106,21 @@
   <div class="container is-max-desktop">
     <div class="results-grid">
       <div class="results-single">
-        <video autoplay muted playsinline loop>
+        <video id="teaser" autoplay muted playsinline loop>
           <source src="assets/teaser.m4v" type="video/mp4">
         </video>
       </div>
     </div>
-    <div class="caption" style="margin-bottom: 3rem;">
-    We train small <b>readout heads</b> to predict image properties from diffusion features and use them to <b>guide image generation</b>.
+    <div class="teaser-caption caption columns is-centered has-text-centered">
+      <div>
+        <!-- <img src="assets/replay.png" />
+        <span class="replay">Replay Video.</span> -->
+        <span>We train small <b>readout heads</b> to predict useful image properties from diffusion features and use them to <b>guide image generation</b>.</span>
+      </div>
     </div>
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-4">Abstract</h2>
+        <h2 style="margin-top: 2.5rem;" class="title is-4">Abstract</h2>
         <div class="content has-text-justified">
           <p>
             We present Readout Guidance, a method for controlling text-to-image diffusion models with learned signals. 
@@ -138,7 +145,7 @@
 <hr>
 <section class="section">
   <div class="container is-max-desktop">
-      <h2 class="title is-4 is-centered has-text-centered">Readout Guidance</h2>
+      <h2 class="title is-4 is-centered has-text-centered" style="margin-bottom:0;">Readout Guidance</h2>
       <br>
       <div class="columns is-vcentered">
         <div class="column is-three-fifths">
@@ -155,6 +162,23 @@
 </section>
 <!-- Approach -->
 
+<!-- Inuition -->
+<hr>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4 is-centered has-text-centered">Extracting Readouts</h2>
+    <div class="results-grid">
+      <div class="results-single">
+        <video autoplay muted playsinline loop>
+          <source src="assets/intuition.m4v" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="is-centered has-text-centered">To extract our readouts, we cache all U-Net decoder layer features from the frozen diffusion model and feed them to our learned readout heads. We train the readout heads on a small number of paired examples (from 100 to 8.5k image pairs).</div>
+  </div>
+</section>
+<!-- Inuition -->
+
 <!-- Spatially Aligned Control -->
 <hr>
 <section class="section">
@@ -169,13 +193,13 @@
     </div>
     <br>
     <div class="btn-row">
-      <span>input type:</span>
+      <span>input type:<br></span>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-modality btn-select btn-active" btn-modality="pose" prompt-key="poseSpatial">pose</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-modality btn-select" btn-modality="depth" prompt-key="depthSpatial">depth</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-modality btn-select" btn-modality="edge" prompt-key="edgeSpatial">edge</button>
     </div>
     <div class="btn-row">
-    <span>prompt:</span>
+    <span>prompt:<br></span>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-spatial btn-select btn-active" btn-spatial="1">a group of people playing with Frisbee's on the grass</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-spatial btn-select" btn-spatial="2">two men on a tennis court shaking hands over the net</button>
     </div>
@@ -209,14 +233,14 @@
     <br>
     <div class="title is-5">Generated Images</div>
     <div class="btn-row">
-      <span>prompt:</span>
+      <span>prompt:<br></span>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-prompt btn-select btn-active" btn-prompt="squirrel">photo of a squirrel with a hamburger at its feet</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-prompt btn-select" btn-prompt="bear">a bear dancing on times square</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-prompt btn-select" btn-prompt="headshot-woman">professional headshot of a woman with the eiffel tower in the background</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-prompt btn-select" btn-prompt="dog">photo of a beagle hovering mid-air</button>
     </div>
     <div class="btn-row">
-    <span>edit:</span>
+    <span>edit:<br></span>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-drag btn-select btn-active" btn-drag="1">drag 1</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-drag btn-select" btn-drag="2">drag 2</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-drag btn-select" btn-drag="3">drag 3</button>
@@ -234,7 +258,7 @@
     <br><br><br>
     <div class="title is-5">Real Images</div>
     <div class="btn-row">
-      <span>prompt:</span>
+      <span>prompt:<br></span>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-prompt-real btn-select btn-active" btn-prompt-real="wolf-looking">wolf looking around</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-prompt-real btn-select" btn-prompt-real="JH_2023-09-14-1823-02">a photo of a tiger</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-prompt-real btn-select" btn-prompt-real="JH_2023-09-14-1825-41">a photo of a man holding a crocodile</button>
@@ -269,12 +293,12 @@
     </div>
     <br>
     <div class="btn-row">
-      <span>identity:</span>
+      <span>identity:<br></span>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-identity btn-select btn-active" btn-identity="man" prompt-key="manIdentity">person 1</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-identity btn-select" btn-identity="woman" prompt-key="womanIdentity">person 2</button>
     </div>
     <div class="btn-row">
-    <span>prompt:</span>
+    <span>prompt:<br></span>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-context btn-select btn-active" btn-context="1">oil painting half body portrait of a man on a city street in copenhagen</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-context btn-select" btn-context="2">oil painting of a man</button>
     </div>
@@ -306,7 +330,7 @@
     </div>
     <br>
     <div class="btn-row">
-      <span>prompt:</span>
+      <span>prompt:<br></span>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-image-var btn-select btn-active" btn-image-var="dog">a dog is walking down the street</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-image-var btn-select" btn-image-var="astronaut">an astronaut is skiing down the hill</button>
     </div>
@@ -333,7 +357,7 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title is-4">Acknowledgements</h2>
-    <span style="color: black;">
+    <span>
       We would like to thank Stephanie Fu, Eric Wallace, Yossi Gandelsman, Dave Epstein, Ben Poole, 
       Thomas Iljic, Brent Yi, Kevin Black, Jessica Dai, Ethan Weber, Rundi Wu, Xiaojuan Wang, 
       Luming Tang, Ruiqi Gao, Jason Baldridge, Zhengqi Li, and Angjoo Kanazawa for helpful discussions and feedback.
@@ -375,5 +399,13 @@
     $('[data-toggle="tooltip"]').tooltip()
   });
 </script>
+<!-- <script>
+  const replay = document.querySelector('.replay');
+  replay.addEventListener('click', () => {
+      const video = document.getElementById("teaser")
+      video.currentTime = 0;
+      video.play();
+  });
+</script> -->
 </body>
 </html>

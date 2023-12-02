@@ -1,3 +1,34 @@
+body {
+  color: black;
+}
+
+.replay {
+  cursor: pointer;
+  color:#2296f3ff;
+  font-size: 12pt;
+  display: inline-block;
+  font-style: normal;
+}
+
+.teaser {
+  margin: 0.5rem auto 1rem auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.teaser-caption {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.teaser-caption img {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+
 .layered-video {
   position: absolute;
   max-width: 80%;
@@ -63,7 +94,7 @@ input[type="range"]::-webkit-slider-thumb {
 .btn-row {
   font-weight: bold;
   color: black;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-size: 14px;
 }
 
@@ -106,27 +137,6 @@ hr {
 /* 
   https://github.com/rl-diffusion/rl-diffusion.github.io
 */
-
-.teaser {
-  margin: 0.5rem auto 1rem auto;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.replay {
-  position: absolute;
-  right: 1rem;
-  top: 0;
-  align-items: center;
-  cursor: pointer;
-  color:#2296f3ff;
-}
-
-.replay img {
-  height: 25px;
-  margin-right: 5px;
-}
 
 .results-grid {
   display: flex;

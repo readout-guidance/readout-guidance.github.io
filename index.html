@@ -47,7 +47,7 @@
 <body>
 
 <section class="hero">
-  <div class="hero-body" style="padding: 3rem 1.5rem 2rem 1.5rem;">
+  <div class="hero-body" style="padding: 3rem 1.5rem 0.5rem 1.5rem;">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
@@ -104,18 +104,18 @@
 <!-- Abstract -->
 <section style="padding: 0rem 1.5rem 3rem 1.5rem;" class="section">
   <div class="container is-max-desktop">
+    <div class="teaser-caption caption columns is-centered has-text-centered">
+      <div>
+        <!-- <img src="assets/replay.png" />
+        <span class="replay">Replay Video.</span> -->
+        <span><b>TL;DR: </b>We use parameter-efficient readout heads to predict useful properties and guide image generation.</span>
+      </div>
+    </div>
     <div class="results-grid">
       <div class="results-single">
         <video id="teaser" autoplay muted playsinline loop>
           <source src="assets/teaser.m4v" type="video/mp4">
         </video>
-      </div>
-    </div>
-    <div class="teaser-caption caption columns is-centered has-text-centered">
-      <div>
-        <!-- <img src="assets/replay.png" />
-        <span class="replay">Replay Video.</span> -->
-        <span>We train small <b>readout heads</b> to predict useful image properties from diffusion features and use them to <b>guide image generation</b>.</span>
       </div>
     </div>
     <div class="columns is-centered has-text-centered">

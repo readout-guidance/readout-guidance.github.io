@@ -177,7 +177,7 @@
           <img src="assets/approach.png" />
         </div>
         <div class="column is-two-fifths">
-          <p style="margin-left:25px;">These readouts can also be used for controlled image generation---by guiding the readout towards some desired value. Readouts for single-image concepts enable spatially aligned control, e.g., pose or depth-guided generation. Readouts for relative concepts between two images, such as appearance similarity and correspondence, enable cross-image controls, such as drag-based manipulation, identity-consistent generation, or image variations.
+          <p style="margin-left:25px;">These readouts can also be used for controlled image generation---by guiding the readout towards some desired value. Readouts for single-image concepts, such as pose and depth, enable spatially aligned control. Readouts for relative concepts between two images, such as appearance similarity and correspondence, enable cross-image controls, such as drag-based manipulation, identity-consistent generation, or image variations.
           </p>
         </div>
     </div>
@@ -190,13 +190,15 @@
 <section id="demo" class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-4 is-centered has-text-centered">Spatially Aligned Control</h2>
+    <div class="caption">We can perform pose, depth, or edge-guided generation, similar to ControlNet.</div>
     <div class="columns is-centered has-text-centered">
-      <button type="button" class="btn btn-caption btn-sm" disabled>By guiding the readout from the&nbsp;</button>
+      <img class="info-icon" src="assets/info.svg" />
+      <button type="button" class="btn btn-caption btn-sm" disabled>This application uses the&nbsp;</button>
       <button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on OpenPose pose images and can be used for pose-controlled generation." disabled>Pose Head,&nbsp;</button>
       <button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on MiDaS depth images and can be used for depth-controlled generation." disabled>Depth Head,&nbsp;</button>
       <button type="button" class="btn btn-caption btn-sm" disabled>or&nbsp;</button>
       <button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on HED edge images and can be used for edge-controlled generation." disabled>Edge Head</button>
-      <button type="button" class="btn btn-caption btn-sm" disabled>, we can perform pose, depth, or edge-guided generation, similar to ControlNet.</button>
+      <button type="button" class="btn btn-caption btn-sm" disabled></button>
     </div>
     <br>
     <div class="btn-row">
@@ -228,6 +230,9 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-4 is-centered has-text-centered">Drag-Based Manipulation</h2>
+    <div class="caption">
+      We can take a drag input and guide for this deformation while maintaining the same appearance.
+    </div>
     <div class="columns is-centered has-text-centered">
       <img class="info-icon" src="assets/info.svg" />
       <button type="button" class="btn btn-caption btn-sm" disabled>This application uses the&nbsp;</button>
@@ -255,9 +260,6 @@
         <img id="dynamic-drag" src="assets/drag_synthetic/squirrel_1.png" />
         <img id="dynamic-result" src="assets/drag_synthetic/squirrel_1.gif" />
       </div>
-      <div class="caption">
-        We can take a drag input and guide for this deformation while maintaining the same appearance.
-      </div>
     </div>
     <br><br><br>
     <div class="title is-5">Real Images</div>
@@ -276,8 +278,8 @@
         <img id="dynamic-drag-real" src="assets/drag_real/wolf-looking.png" />
         <img id="dynamic-result-real" src="assets/drag_real/wolf-looking.gif" />
       </div>
-      <div class="caption">
-        We can do the same task on real images without per-sample optimization, where we instead use features derived from inverting the real image for guidance.
+      <div style="margin-top: 10px; margin-bottom: 0px;" class="caption">
+        We can do the same manipulations on real images without per-sample optimization, where we guide against features derived from inverting the real image.
       </div>
     </div>
   </div>
@@ -289,6 +291,9 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-4 is-centered has-text-centered">Identity Consistency</h2>
+    <div class="caption">
+      We can guide a sampling trajectory with a desired layout to contain a specific identity.
+    </div>
     <div class="columns is-centered has-text-centered">
       <img class="info-icon" src="assets/info.svg" />
       <button type="button" class="btn btn-caption btn-sm" disabled>This application uses the&nbsp;</button>
@@ -314,9 +319,6 @@
           <source src="assets/identity/man_1.m4v" type="video/mp4">
         </video>
       </div>
-      <div class="caption">
-        We can guide a sampling trajectory to contain a specific identity, starting from an image with a desired layout but random person.
-      </div>
     </div>
   </div>
 </section>
@@ -327,6 +329,9 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-4 is-centered has-text-centered">Image Variations</h2>
+    <div class="caption">
+      Increasing the guidance weight can encourage higher appearance similarity to a reference image.
+    </div>
     <div class="columns is-centered has-text-centered">
       <img class="info-icon" src="assets/info.svg" />
       <button type="button" class="btn btn-caption btn-sm" disabled>This application uses the&nbsp;</button>
@@ -347,9 +352,6 @@
           <b style="font-size:14px;text-align:center;"> RG Weight </b>
           <input id="dynamicSlider" type="range" value="0.0" min="0.0" max="1.0" step = "0.1" oninput="setSlider(this)">
           <b id="dynamicSliderValue">0</b>
-        </div>
-        <div class="caption">
-          We can guide a sampling trajectory to match the appearance of a reference image, where increasing the guidance weight encourages higher similarity.
         </div>
       </div>
     </div>

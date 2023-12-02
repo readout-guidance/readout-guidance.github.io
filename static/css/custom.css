@@ -47,10 +47,11 @@ body {
 }
 
 .caption {
-  margin-top: 15px !important;
-  width: auto !important;
+  /*margin-top: 15px !important;*/
+  /* width: auto !important;*/
+  /*min-width: 400px;*/
+  margin-bottom: 20px;
   font-size: 12pt;
-  min-width: 400px;
   color: black;
   text-align: center;
   font-style: italic;

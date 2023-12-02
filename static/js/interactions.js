@@ -82,7 +82,7 @@ function changeDynamicResult(basePath, dynamic1, dynamic2, dynamicExt1, dynamicE
     dynamicElement1Src = basePath + path1
     if (path2 !== null) {
       dynamicElement1Src += "_" + path2;
-    } 
+    }
     dynamicElement1Src += dynamicExt1;
     dynamicElement1.src = dynamicElement1Src;
     if (dynamicElement2 !== null) {

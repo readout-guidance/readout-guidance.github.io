@@ -179,14 +179,16 @@
       <button type="button" onClick="setActiveButton(this)" class="btn btn-spatial btn-select btn-active" btn-spatial="1">a group of people playing with Frisbee's on the grass</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-spatial btn-select" btn-spatial="2">two men on a tennis court shaking hands over the net</button>
     </div>
+    <br>
     <div class="results-grid">
-      <div style="max-width: 95% !important;" class="results-single">
-        <video style="margin: 10px -1px 0 0;" id="dynamic-spatial" autoplay muted playsinline loop>
+      <div class="results-single">
+        <img src="assets/spatial/empty.png">
+        <video class="layered-video" id="dynamic-spatial" autoplay muted playsinline loop>
           <source src="assets/spatial/pose_1.m4v" type="video/mp4">
         </video>
-        <div class="caption">
-          We can take a control input and guide the readout to match for spatially controlled generation.
-        </div>
+      </div>
+      <div class="caption">
+        We can take a control input and guide the readout to match for spatially controlled generation.
       </div>
     </div>
   </div>
@@ -219,6 +221,7 @@
       <button type="button" onClick="setActiveButton(this)" class="btn btn-drag btn-select" btn-drag="2">drag 2</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-drag btn-select" btn-drag="3">drag 3</button>
     </div>
+    <br>
     <div class="results-grid">
       <div class="results-pair">
         <img id="dynamic-drag" src="assets/drag_synthetic/squirrel_1.png" />
@@ -239,6 +242,7 @@
       <button type="button" onClick="setActiveButton(this)" class="btn btn-prompt-real btn-select" btn-prompt-real="JH_2023-09-14-1826-07">a photo of a raccoon</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-prompt-real btn-select" btn-prompt-real="alpine-ibex">an alpine ibex with horns</button>
     </div>
+    <br>
     <div class="results-grid">
       <div class="results-pair">
         <img id="dynamic-drag-real" src="assets/drag_real/wolf-looking.png" />
@@ -274,9 +278,11 @@
       <button type="button" onClick="setActiveButton(this)" class="btn btn-context btn-select btn-active" btn-context="1">oil painting half body portrait of a man on a city street in copenhagen</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-context btn-select" btn-context="2">oil painting of a man</button>
     </div>
+    <br>
     <div class="results-grid">
       <div class="results-single">
-        <video id="dynamic-identity" autoplay muted playsinline loop>
+        <img src="assets/identity/empty.png">
+        <video class="layered-video" id="dynamic-identity" autoplay muted playsinline loop>
           <source src="assets/identity/man_1.m4v" type="video/mp4">
         </video>
       </div>
@@ -304,6 +310,7 @@
       <button type="button" onClick="setActiveButton(this)" class="btn btn-image-var btn-select btn-active" btn-image-var="dog">a dog is walking down the street</button>
       <button type="button" onClick="setActiveButton(this)" class="btn btn-image-var btn-select" btn-image-var="astronaut">an astronaut is skiing down the hill</button>
     </div>
+    <br>
     <div class="results-grid">
       <div class="results-pair">
         <img id="dynamic-image-var-ref" src="assets/image_var/dog_ref.png" />

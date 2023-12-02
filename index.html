@@ -86,6 +86,14 @@
                 </a>
               </span>
               <span class="link-block">
+                <a href="#demo" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="assets/hand.svg" />
+                  </span>
+                  <span>Demo</span>
+                </a>
+              </span>
+              <span class="link-block">
                 <a href="" class="external-link button is-normal is-rounded is-dark" disabled>
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -153,7 +161,7 @@
         </video>
       </div>
     </div>
-     <div class="is-centered has-text-centered">Given a frozen, pre-trained text-to-image diffusion model, we train parameter-efficient <i>readout heads</i> to interpret relevant signals, or <i>readouts</i>, from the intermediate network features. This process is data-driven, but only requires as few as 100 paired examples, since it bootstraps the already-rich diffusion features. During sampling, a readout head can be used at any sampling timestep to query the model's current estimate of a particular property (for the image being sampled).</div>
+     <div class="is-centered has-text-centered">Given a frozen text-to-image diffusion model, we train parameter-efficient <i>readout heads</i> to interpret relevant signals, or <i>readouts</i>, from the intermediate network features. Training requires as few as 100 paired examples, since it bootstraps pre-trained diffusion features. During sampling, a readout head can be used at any timestep to query the model's current estimate of a particular property (for the image being generated).</div>
   </div>
 </section>
 <!-- Inuition -->
@@ -179,7 +187,7 @@
 
 <!-- Spatially Aligned Control -->
 <hr>
-<section class="section">
+<section id="demo" class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-4 is-centered has-text-centered">Spatially Aligned Control</h2>
     <div class="columns is-centered has-text-centered">

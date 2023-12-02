@@ -153,7 +153,7 @@
         </video>
       </div>
     </div>
-     <div class="is-centered has-text-centered">Given a frozen pre-trained text-to-image diffusion model, we learn parameter-efficient <i>readout heads</i> to interpret relevant signals, or <i>readouts</i>, from the intermediate network features. We train the readout heads on a small number of paired examples (from 100 to 8.5k samples).</div>
+     <div class="is-centered has-text-centered">Given a frozen, pre-trained text-to-image diffusion model, we train parameter-efficient <i>readout heads</i> to interpret relevant signals, or <i>readouts</i>, from the intermediate network features. This process is data-driven, but only requires as few as 100 paired examples, since it bootstraps the already-rich diffusion features. During sampling, a readout head can be used at any sampling timestep to query the model's current estimate of a particular property (for the image being sampled).</div>
   </div>
 </section>
 <!-- Inuition -->
@@ -169,7 +169,7 @@
           <img src="assets/approach.png" />
         </div>
         <div class="column is-two-fifths">
-          <p style="margin-left:25px;">Readout heads can be used during sampling to guide towards a desired target for controlled image generation. Readouts for single-image concepts, such as pose and depth, enable spatially aligned control. Readouts for relative concepts between two images, such as appearance similarity and correspondence, enable drag-based manipulation.
+          <p style="margin-left:25px;">These readouts can also be used for controlled image generation---by guiding the readout towards some desired value. Readouts for single-image concepts enable spatially aligned control, e.g., pose or depth-guided generation. Readouts for relative concepts between two images, such as appearance similarity and correspondence, enable cross-image controls, such as drag-based manipulation, identity-consistent generation, or image variations.
           </p>
         </div>
     </div>

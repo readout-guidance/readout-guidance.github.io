@@ -194,10 +194,10 @@
     <div class="columns is-centered has-text-centered">
       <img class="info-icon" src="assets/info.svg" />
       <button type="button" class="btn btn-caption btn-sm" disabled>This application uses the&nbsp;</button>
-      <button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on OpenPose pose images and can be used for pose-controlled generation." disabled>Pose Head,&nbsp;</button>
-      <button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on MiDaS depth images and can be used for depth-controlled generation." disabled>Depth Head,&nbsp;</button>
+      <button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head is trained to produce an estimate of human pose. We use OpenPose to create our training examples." disabled>Pose Head,&nbsp;</button>
+      <button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head is trained to produce depth maps. We use MiDaS to create our training examples." disabled>Depth Head,&nbsp;</button>
       <button type="button" class="btn btn-caption btn-sm" disabled>or&nbsp;</button>
-      <button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on HED edge images and can be used for edge-controlled generation." disabled>Edge Head</button>
+      <button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head is trained to produce edge maps. We use the HED edge detector to create training examples." disabled>Edge Head</button>
       <button type="button" class="btn btn-caption btn-sm" disabled></button>
     </div>
     <br>
@@ -236,8 +236,8 @@
     <div class="columns is-centered has-text-centered">
       <img class="info-icon" src="assets/info.svg" />
       <button type="button" class="btn btn-caption btn-sm" disabled>This application uses the&nbsp;</button>
-    	<button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains on point tracks from video and can be used to force a desired deformation." disabled>Correspondence Feature Head,&nbsp;</button>
-    	<button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head trains a contrastive similarity metric between an anchor and positive / negative images and can be used to maintain the appearance of a reference image." disabled>Appearance Similarity Head</button>
+    	<button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head is trained to enable correspondence estimation between a pair of images. We use CoTracker to create training examples." disabled>Correspondence Feature Head,&nbsp;</button>
+    	<button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head is trained contrastively to provide a metric for appearance similarity between two images. As positive examples, we use pairs of frames from a video." disabled>Appearance Similarity Head</button>
     </div>
     <br>
     <div class="title is-5">Generated Images</div>
@@ -297,8 +297,8 @@
     <div class="columns is-centered has-text-centered">
       <img class="info-icon" src="assets/info.svg" />
       <button type="button" class="btn btn-caption btn-sm" disabled>This application uses the&nbsp;</button>
-    	<button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head is a variant of the appearance similarity head trained on faces and can be used to inject a specific identity." disabled>Identity Head,&nbsp;</button>
-    	<button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head is used to preserve the background of the original sampling process." disabled>Appearance Similarity Head</button>
+    	<button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head is trained contrastively to provide a metric for appearance similarity between two images. As positive examples, we use pairs of frames from a video." disabled>Appearance Similarity Head,&nbsp;</button>
+    	<button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head is similar to the appearance similarity head, but is instead trained on images of faces." disabled>Identity Head</button>
     </div>
     <br>
     <div class="btn-row">
@@ -335,7 +335,7 @@
     <div class="columns is-centered has-text-centered">
       <img class="info-icon" src="assets/info.svg" />
       <button type="button" class="btn btn-caption btn-sm" disabled>This application uses the&nbsp;</button>
-    	<button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This is the same appearance similarity head used in drag-based manipulation." disabled>Appearance Similarity Head</button>
+    	<button type="button" class="btn btn-caption btn-sm" data-toggle="tooltip" data-placement="bottom" title="This head is trained contrastively to provide a metric for appearance similarity between two images. As positive examples, we use pairs of frames from a video." disabled>Appearance Similarity Head</button>
     </div>
     <br>
     <div class="btn-row">
